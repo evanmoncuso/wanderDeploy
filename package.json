@@ -1,0 +1,29 @@
+{
+  "name": "wander-my-friends",
+  "version": "1.0.0",
+  "description": "A lending and sharing app for items.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evanmoncuso/2016-06-mvp.git"
+  },
+  "keywords": [
+    "express",
+    "angular",
+    "mariadb"
+  ],
+  "author": "Evan Moncuso",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evanmoncuso/2016-06-mvp/issues"
+  },
+  "homepage": "https://github.com/evanmoncuso/2016-06-mvp#readme",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  }
+}
