@@ -39,9 +39,10 @@ Once the project moves into development, the press release can be used as a touc
   a master list of items for all users to look at and select lending options from. As soon as you sign up, you can start borrowing and lending.
 
 ## Customer Quote ##
-  "I was tired of my neighbor borrowing all my lawn implements and never giving them back. He'd always say he never had them in the first place. Now he can't say he doesn't have my Husqvarna 18.5hp variable transmission riding lawnmower!"
-   - Marv, 48
-   - Cleveland, OH
+  > "I was tired of my neighbor borrowing all my lawn implements and never giving them back. He'd always say he never had them in the first place. Now he can't say he doesn't have my Husqvarna 18.5hp variable transmission riding lawnmower!"
+
+  Marv, 48
+  Cleveland, OH
 
 ## Closing and Call to Action ##
   Next go to the site and sign up to provide things for other people: LINK HERE!
