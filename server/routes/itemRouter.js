@@ -6,16 +6,23 @@ let router = express.Router();
 
 router.get('/*', (req, res) => {
   res.send('received at item Router');
+  let token = req.headers['x-access-token'];
+  let username = services.decodeToken(token);
+  db.pGetAllUsersOwnedItems(username, (data) => {
+    console.log(data);
+  });
+  res.send('okay');
 });
 
 router.post('/*', (req, res) => {
   let token = req.headers['x-access-token'];
   let username = services.decodeToken(token);
   let item = req.body.item;
-  console.log('username:',username);
+  console.log('line 21', username, item);
   // from here
   // take the item, add it to the database
-  db.pGetUserIdFromName(username, (data) => {
+  db.pGetUserIdFromName(username)
+  .then((data) => {
     let userId = data[0].userId;
     let object = {
         itemId: null,
@@ -24,14 +31,9 @@ router.post('/*', (req, res) => {
         lentTo: null,
       }
     db.pQueryInsert(object, 'items');
-
+    res.send('success!');
   });
-  // {
-  //   itemId: null,
-  //   itemname: req.body.item,
-  //   owner: username,
-  //   lentTo: null,
-  // }
+  console.log('success! outside');
 });
 
 module.exports = router;

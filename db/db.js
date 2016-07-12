@@ -40,20 +40,9 @@ exports.pQueryGet = (table, callback) => {
   });
 }
 
-exports.pGetUserIdFromName = (username, callback) => {
-  return new Promise((resolve, reject) => {
-    connection.query('SELECT userId FROM users WHERE username = "' + username +'"', (err, result) => {
-      if (err) {
-        reject(err);
-      }
-      callback(result);
-    });
-  });
-}
 
 exports.pQueryCheckLogin = (username, callback) => {
   return new Promise((resolve, reject) => {
-    // WHERE username = ' + username
     connection.query('SELECT password FROM users WHERE username = "' + username + '"', (err, result) => {
       if (err) {
         throw err;
@@ -62,3 +51,47 @@ exports.pQueryCheckLogin = (username, callback) => {
     });
   });
 }
+
+exports.pGetAllUsersOwnedItems = (username, callback) => {
+  this.pGetUserIdFromName(username, (userId) => {
+    connection.query('SELECT itemname FROM items WHERE owner = '+ userId, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      callback(result);
+    })
+  });
+};
+
+// exports.pGetUserIdFromName = (username) => {
+//   return new Promise((resolve, reject) => {
+//     connection.query('SELECT userId FROM users WHERE username = "' + username +'"', (err, result) => {
+//       if (err) {
+//         reject(err);
+//       }
+//       resolve(result);
+//     });
+//   });
+// }
+
+exports.pGetUserIdFromName = (username) => {
+  return new Promise((resolve, reject) => {
+    connection.query('SELECT userId FROM users WHERE username = "' + username +'"', (err, result) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(result);
+    });
+  });
+}
+
+exports.pGetUserOwnedItems = (userId) => {
+  return new Promise((resolve, reject) => {
+    connection.query('SELECT itemname FROM items WHERE owner = '+ userId, (err, result) => {
+      if (err) {
+        reject(err);
+      }
+      resolve(result);
+    });
+  })
+};

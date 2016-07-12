@@ -10,5 +10,6 @@ angular.module('main', [])
     .then((res) => {
       console.log('sent!');
     });
+    $scope.item = '';
   }
 });
