@@ -12,6 +12,16 @@ header {
   margin-bottom:12px;
 }
 
+.add_item {
+  width:960px;
+  margin:0 auto;
+  border-bottom: 1px solid black;
+}
+
+.add_item form {
+  margin-bottom: 12px;
+}
+
 .main_view {
   margin:0 auto;
   width:960px;
@@ -22,6 +32,7 @@ header {
 
   font-size: 24px;
   line-height: 32px;
+  margin-bottom:12px;
 }
 
 .create, .login {
@@ -65,6 +76,10 @@ footer {
   margin-top:48px;
 }
 
-footer span {
+.byline {
   font-size:12px;
+}
+
+.name {
+  color:#444;
 }

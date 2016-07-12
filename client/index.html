@@ -14,14 +14,22 @@
       <a href="#/login">login</a>
       <a href="#/create">create</a>
     </header>
+    <div class="add_item">
+      <form name="login_user" ng-submit="addItem(item)">
+        <label>item name: </label>
+        <input type="text" ng-model="item.itemname" placeholder="item...">
+        <button>log in</button>
+      </form>
+    </div>
     <div class="main_view" ui-view>
 
     </div>
     <footer>
-      <span>by: evan moncuso</span>
+      <span class="byline">by: <span class="name">evan moncuso</span></span>
     </footer>
     <script src="compiled/createUser/create.js"></script>
     <script src="compiled/login/login.js"></script>
+    <script src="compiled/items/items.js"></script>
     <script src="compiled/app.js"></script>
   </body>
 </html>

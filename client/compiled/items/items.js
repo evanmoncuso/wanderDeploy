@@ -1,0 +1,8 @@
+'use strict';
+
+angular.module('item', []).controller('addItem', function ($scope, $http) {
+  $scope.addItem = function (item) {
+    console.log(item);
+  };
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2FwcC9pdGVtcy9pdGVtcy5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLFFBQVEsTUFBUixDQUFlLE1BQWYsRUFBdUIsRUFBdkIsRUFDRyxVQURILENBQ2MsU0FEZCxFQUN5QixVQUFDLE1BQUQsRUFBUyxLQUFULEVBQW1CO0FBQ3hDLFNBQU8sT0FBUCxHQUFpQixVQUFDLElBQUQsRUFBVTtBQUN6QixZQUFRLEdBQVIsQ0FBWSxJQUFaO0FBQ0QsR0FGRDtBQUdELENBTEgiLCJmaWxlIjoiaXRlbXMuanMiLCJzb3VyY2VzQ29udGVudCI6WyJhbmd1bGFyLm1vZHVsZSgnaXRlbScsIFtdKVxuICAuY29udHJvbGxlcignYWRkSXRlbScsICgkc2NvcGUsICRodHRwKSA9PiB7XG4gICAgJHNjb3BlLmFkZEl0ZW0gPSAoaXRlbSkgPT4ge1xuICAgICAgY29uc29sZS5sb2coaXRlbSk7XG4gICAgfVxuICB9KTtcbiJdfQ==
