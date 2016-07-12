@@ -16,8 +16,7 @@ connection.connect((err) => {
 });
 
 exports.connection = connection;
-// data = object
-// table = string
+
 exports.pQueryInsert = (data, table) => {
   return new Promise( (resolve, reject) => {
     connection.query('INSERT INTO ' + table + ' SET ?', data, (err, result) => {
@@ -53,45 +52,28 @@ exports.pQueryCheckLogin = (username, callback) => {
 }
 
 exports.pGetAllUsersOwnedItems = (username, callback) => {
-  this.pGetUserIdFromName(username, (userId) => {
-    connection.query('SELECT itemname FROM items WHERE owner = '+ userId, (err, result) => {
-      if (err) {
-        throw err;
-      }
-      callback(result);
-    })
+  connection.query('SELECT itemname FROM items WHERE owner = '+ userId, (err, result) => {
+    if (err) {
+      throw err;
+    }
+    callback(result);
   });
 };
 
-// exports.pGetUserIdFromName = (username) => {
-//   return new Promise((resolve, reject) => {
-//     connection.query('SELECT userId FROM users WHERE username = "' + username +'"', (err, result) => {
-//       if (err) {
-//         reject(err);
-//       }
-//       resolve(result);
-//     });
-//   });
-// }
+exports.pGetUserIdFromName = (username, callback) => {
+  connection.query('SELECT userId FROM users WHERE username = "' + username +'"', (err, result) => {
+    if (err) {
+      throw err;
+    }
+    callback(result);
+  });
+};
 
-exports.pGetUserIdFromName = (username) => {
-  return new Promise((resolve, reject) => {
-    connection.query('SELECT userId FROM users WHERE username = "' + username +'"', (err, result) => {
-      if (err) {
-        reject(err);
-      }
-      resolve(result);
-    });
+exports.pGetUserOwnedItems = (userId, callback) => {
+  connection.query('SELECT itemname FROM items WHERE owner = ' + userId, (err, result) => {
+    if (err) {
+      throw err;
+    }
+    callback(result);
   });
 }
-
-exports.pGetUserOwnedItems = (userId) => {
-  return new Promise((resolve, reject) => {
-    connection.query('SELECT itemname FROM items WHERE owner = '+ userId, (err, result) => {
-      if (err) {
-        reject(err);
-      }
-      resolve(result);
-    });
-  })
-};
