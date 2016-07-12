@@ -1,25 +1,26 @@
 <div class="add_item" >
   <label> add an item </label>
-  <div class="group">
-    <input type="text" ng-model="item" placeholder="new item" />
-    <div class="submit_div" ng-click="submitItem(item)">add</div>
-  </div>
-  <a href="#/home">home</a>
+  <input type="text" class="inline" ng-model="item" placeholder="new item" />
+  <div class="submit_div inline" ng-click="submitItem(item)">add</div>
+  <a href="#/home">my items</a>
   <a href="#/all">all items</a>
 </div>
-<div class="home_container" ng-init="updateOaL()">
+
+<div class="home_container" ng-init="update()">
   <div class="my_items half">
     <h2>These are the items you own!</h2>
-    <ul>
-      <li class="owned_item" ng-repeat="item in owned track by item.itemId">
-        {{ item.itemname }}
-      </li>
-    </ul>
+    <div class="owned_item" ng-repeat="item in items track by item.itemId">
+      <span class="my_item_name">{{item.itemname}}</span>
+      <span class="lentTo" ng-if="item.lentTo !== null">lent to: {{item.lentTo}}</span>
+      <button class="dothings" ng-click="removeItem(item)">remove</button>
+    </div>
   </div>
-  <div class="borrowed_items half">
+  <div class="borrowed_items half" ng-init="getMyLentItems()">
     <h2>These are the borrowed items you have!</h2>
-    <ul>
-      <li>a thing!</li>
-    </ul>
+    <div class="owned_item" ng-repeat="item in lentToMe track by item.itemId">
+      <span class="my_item_name">{{item.itemname}}</span>
+      <span class="owner_name"> lent from: {{item.owner}}</span>
+      <button class="dothings" ng-click="returnItem(item)">return</button>
+    </div>
   </div>
 </div>

@@ -22,7 +22,6 @@ let compare = (incoming, stored) => {
 let genToken = (user, res) => {
   // create the token based on our user's name and our secret phrase!
   let token = jwt.encode(user, secret.secret);
-  console.log(token);
   res.send(token);
 };
 

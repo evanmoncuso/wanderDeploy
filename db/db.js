@@ -23,7 +23,6 @@ exports.pQueryInsert = (data, table) => {
       if (err) {
         console.log(err);
       }
-      console.log('successfully inserted into db');
     })
   });
 }
@@ -76,6 +75,21 @@ exports.pGetUserOwnedItems = (userId, callback) => {
   });
 }
 
-exports.getUsernameFromId = (userId) => {
+exports.lendTo = (userId, itemId, callback) => {
+  connection.query('UPDATE items SET lentTo = ' + userId + ' WHERE itemId = ' + itemId, (err, result) => {
+    if(err) {
+      throw err;
+    }
+    callback(result);
+  })
+}
 
+exports.thingsIAmBorrowing = (userId, callback) => {
+  console.log('SELECT * FROM items WHERE lentTo = ' + userId);
+  connection.query('SELECT * FROM items WHERE lentTo = ' + userId, (err, result) => {
+    if(err) {
+      throw err;
+    }
+    callback(result);
+  })
 }

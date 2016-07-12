@@ -6,17 +6,20 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^<div class="add_item" >$/;"	function	line:1
 label	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <label> add an item <\/label>$/;"	function	line:2
-div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <div class="group">$/;"	function	line:3
-input	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <input type="text" ng-model="item" placeholder="new item" \/>$/;"	function	line:4
-div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <div class="submit_div" ng-click="submitItem(item)">add<\/div>$/;"	function	line:5
-a	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <a href="#\/home">home<\/a>$/;"	function	line:7
-a	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <a href="#\/all">all items<\/a>$/;"	function	line:8
-div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^<div class="home_container" ng-init="updateOaL()">$/;"	function	line:10
-div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <div class="my_items half">$/;"	function	line:11
-h	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <h2>These are the items you own!<\/h2>$/;"	function	line:12
-ul	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <ul>$/;"	function	line:13
-li	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^      <li class="owned_item" ng-repeat="item in owned track by item.itemId">$/;"	function	line:14
-div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <div class="borrowed_items half">$/;"	function	line:19
-h	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <h2>These are the borrowed items you have!<\/h2>$/;"	function	line:20
-ul	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <ul>$/;"	function	line:21
-li	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^      <li>a thing!<\/li>$/;"	function	line:22
+input	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <input type="text" class="inline" ng-model="item" placeholder="new item" \/>$/;"	function	line:3
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <div class="submit_div inline" ng-click="submitItem(item)">add<\/div>$/;"	function	line:4
+a	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <a href="#\/home">my items<\/a>$/;"	function	line:5
+a	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <a href="#\/all">all items<\/a>$/;"	function	line:6
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^<div class="home_container" ng-init="update()">$/;"	function	line:9
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <div class="my_items half">$/;"	function	line:10
+h	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <h2>These are the items you own!<\/h2>$/;"	function	line:11
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <div class="owned_item" ng-repeat="item in items track by item.itemId">$/;"	function	line:12
+span	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^      <span class="my_item_name">{{item.itemname}}<\/span>$/;"	function	line:13
+span	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^      <span class="lentTo" ng-if="item.lentTo !== null">lent to: {{item.lentTo}}<\/span>$/;"	function	line:14
+button	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^      <button class="dothings" ng-click="removeItem(item)">remove<\/button>$/;"	function	line:15
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <div class="borrowed_items half" ng-init="getMyLentItems()">$/;"	function	line:18
+h	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <h2>These are the borrowed items you have!<\/h2>$/;"	function	line:19
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <div class="owned_item" ng-repeat="item in lentToMe track by item.itemId">$/;"	function	line:20
+span	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^      <span class="my_item_name">{{item.itemname}}<\/span>$/;"	function	line:21
+span	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^      <span class="owner_name"> lent from: {{item.owner}}<\/span>$/;"	function	line:22
+button	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^      <button class="dothings" ng-click="returnItem(item)">return<\/button>$/;"	function	line:23
