@@ -14,7 +14,7 @@ let crypt = (req, res, next) => {
 };
 
 let compare = (incoming, stored) => {
-  return bcrypt.compareSync(incoming.password, stored);
+  return bcrypt.compareSync(incoming, stored);
 }
 
 let dbDataValidate = (data) => {
@@ -36,5 +36,6 @@ let dbDataValidate = (data) => {
 
 module.exports = {
   crypt: crypt,
-  dbDataValidate: dbDataValidate
+  dbDataValidate: dbDataValidate,
+  compare: compare
 };

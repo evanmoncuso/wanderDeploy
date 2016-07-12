@@ -16,11 +16,14 @@ router.get('/password', (req, res) => {
     } else {
       data = data[0];
     }
-    res.end(JSON.stringify(data));
+    console.log(query.password);
+    console.log(data.password);
+
+    console.log(services.compare(query.password, data.password));
   });
 
 
-  
+
 })
 
 router.get('/*', (req, res) => {
