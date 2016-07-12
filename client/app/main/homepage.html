@@ -1,16 +1,19 @@
-<div class="main_container">
-  <div class="my_items">
+<div class="add_item" >
+  <label> add an item </label>
+    <input type="text" ng-model="item" placeholder="new item" />
+    <button ng-click="submitItem(item)">add</button>
+</div>
+<div class="home_container">
+  <div class="my_items half">
+    <h2>These are the items you own!</h2>
     <ul>
-      <li>abc</li>
-      <li>def</li>
-      <li>ghi</li>
+      <li>a thing!</li>
     </ul>
   </div>
-  <div class="borrowed_items">
+  <div class="borrowed_items half">
+    <h2>These are the borrowed items you have!</h2>
     <ul>
-      <li>123</li>
-      <li>456</li>
-      <li>789</li>
+      <li>a thing!</li>
     </ul>
   </div>
 </div>

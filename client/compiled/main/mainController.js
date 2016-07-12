@@ -1,0 +1,9 @@
+'use strict';
+
+angular.module('main', []).controller('wanderController', function ($scope, $http) {
+
+  $scope.submitItem = function (item) {
+    console.log(item);
+  };
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2FwcC9tYWluL21haW5Db250cm9sbGVyLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsUUFBUSxNQUFSLENBQWUsTUFBZixFQUF1QixFQUF2QixFQUNDLFVBREQsQ0FDWSxrQkFEWixFQUNnQyxVQUFDLE1BQUQsRUFBUyxLQUFULEVBQW1COztBQUVqRCxTQUFPLFVBQVAsR0FBb0IsVUFBQyxJQUFELEVBQVU7QUFDNUIsWUFBUSxHQUFSLENBQVksSUFBWjtBQUNELEdBRkQ7QUFHRCxDQU5EIiwiZmlsZSI6Im1haW5Db250cm9sbGVyLmpzIiwic291cmNlc0NvbnRlbnQiOlsiYW5ndWxhci5tb2R1bGUoJ21haW4nLCBbXSlcbi5jb250cm9sbGVyKCd3YW5kZXJDb250cm9sbGVyJywgKCRzY29wZSwgJGh0dHApID0+IHtcblxuICAkc2NvcGUuc3VibWl0SXRlbSA9IChpdGVtKSA9PiB7XG4gICAgY29uc29sZS5sb2coaXRlbSk7XG4gIH1cbn0pO1xuIl19

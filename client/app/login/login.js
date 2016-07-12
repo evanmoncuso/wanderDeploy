@@ -1,5 +1,5 @@
 angular.module('login', [])
-  .controller('loginController', ($scope, $http) => {
+  .controller('loginController', ($scope, $http, $window, $location) => {
 
     $scope.invalid = '';
 
@@ -16,8 +16,8 @@ angular.module('login', [])
           params: {username: user.username, password: user.password}
         })
         .then((res) => {
-          console.log('GET for username ' + user.username + ' sent!');
-          console.log('20: ', res.body);
+          $window.localStorage.setItem('com.wander', res.data);
+          $location.path('/home');
         });
       }
     }

@@ -29,6 +29,11 @@ app.get('/', (req, res) => {
   res.send('Hello');
 });
 
+app.get('/test', (req, res) => {
+  console.log('incoming from:', req.headers);
+  res.send(req.headers);
+});
+
 app.post('/', (req, res) => {
   console.log(req.body);
   res.send('package received');

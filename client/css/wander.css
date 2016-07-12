@@ -7,9 +7,37 @@ header {
   width:960px;
 
   padding:12px;
-  border-bottom: 4px solid black;
   margin: 0 auto;
   margin-bottom:12px;
+}
+
+a {
+  display:inline-block;
+  color:inherit;
+  text-decoration: none;
+  width:120px;
+  color:white;
+  background-color: #000;
+  padding:12px;
+}
+
+.top_bar {
+  width:960px;
+  margin:0 auto;
+  border-bottom: 4px solid #000;
+  margin-bottom:12px;
+}
+
+.logout {
+  position: absolute;
+  top: 24px;
+  text-align: right;
+  right: 24px;
+  /* height: 24px; */
+  font-size: 22px;
+  background-color: #000;
+  border: none;
+  color: white;
 }
 
 .add_item {
@@ -29,7 +57,6 @@ header {
 
 .main_view input {
   display:block;
-
   font-size: 24px;
   line-height: 32px;
   margin-bottom:12px;
@@ -51,7 +78,7 @@ User creation page
 ========
 */
 
-.invalid_password {
+.invalid_password, .invalid_login {
   padding:12px;
   border: 2px solid #D32F2F;
   border-radius: 6px;
@@ -61,6 +88,37 @@ User creation page
 
   color: #fff;
 }
+
+/*
+========
+Home page
+========
+*/
+
+.home_container {
+  display:flex;
+}
+
+.home_container > div {
+  flex-grow: 1;
+}
+
+.half h2{
+  text-align: center;
+  font-family: Helvetica;
+  font-size:22px;
+  line-height: 32px;
+
+  width:90%;
+  display:inline-block;
+  border-bottom: 2px solid #000;
+}
+
+/*
+========
+footer things
+========
+*/
 
 footer {
   font-size: 36px;

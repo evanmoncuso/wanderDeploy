@@ -1,4 +1,6 @@
 const bcrypt = require('bcrypt');
+const secret = require('./secrets');
+const jwt = require('jwt-simple');
 
 let crypt = (req, res, next) => {
   // lets make that password just way better
@@ -15,10 +17,21 @@ let crypt = (req, res, next) => {
 
 let compare = (incoming, stored) => {
   return bcrypt.compareSync(incoming, stored);
-}
+};
+
+let genToken = (user, res) => {
+  // create the token based on our user's name and our secret phrase!
+  let token = jwt.encode(user, secret.secret);
+  console.log(token);
+  res.send(token);
+};
+
+let hasToken = () => {
+  // is there a token in the local storage from us?
+ return !!$window.localStorage.getItem('com.wander');
+};
 
 let dbDataValidate = (data) => {
-  // maybe eventually getting something in here to validate the username does not exist would be a good idea!
   if (data.username === undefined) {
     throw 'username cannot be undefined';
   } else if (data.password === undefined) {
@@ -37,5 +50,7 @@ let dbDataValidate = (data) => {
 module.exports = {
   crypt: crypt,
   dbDataValidate: dbDataValidate,
-  compare: compare
+  compare: compare,
+  genToken: genToken,
+  hasToken: hasToken
 };
