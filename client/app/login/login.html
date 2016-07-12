@@ -1,0 +1,12 @@
+<div class="login">
+  <form name="login_user" ng-submit='login(user)'>
+    <label> username: </label>
+    <input type="text" ng-model="user.username" placeholder="username">
+    <label> password: </label>
+    <input type="password" ng-model="user.password" placeholder="password">
+    <button>log in</button>
+  </form>
+  <div class="invalid_login" ng-if="invalid">
+    {{invalid}}
+  </div>
+</div>

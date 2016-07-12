@@ -5,13 +5,23 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/wander.css" />
-    <script src="../node_modules/angular/angular.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.js"></script>
   </head>
-  <body>
+  <body ng-app="wander">
     <header>
       <h1>Wander my Friends</h1>
+      <a href="#/login">login</a>
+      <a href="#/create">create</a>
     </header>
-    <div ng-view></div>
-    <script src="app/app.js"></script>
+    <div class="main_view" ui-view>
+
+    </div>
+    <footer>
+      <span>by: evan moncuso</span>
+    </footer>
+    <script src="compiled/createUser/create.js"></script>
+    <script src="compiled/login/login.js"></script>
+    <script src="compiled/app.js"></script>
   </body>
 </html>

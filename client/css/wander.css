@@ -1,0 +1,70 @@
+header {
+  font-size: 36px;
+  font-family: Helvetica;
+  line-height: 48px;
+  text-align: center;
+
+  width:960px;
+
+  padding:12px;
+  border-bottom: 4px solid black;
+  margin: 0 auto;
+  margin-bottom:12px;
+}
+
+.main_view {
+  margin:0 auto;
+  width:960px;
+}
+
+.main_view input {
+  display:block;
+
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.create, .login {
+  margin: 0 auto;
+  width:360px;
+
+  font-family:Helvetica;
+
+  font-size: 24px;
+  line-height: 32px;
+}
+
+/*
+========
+User creation page
+========
+*/
+
+.invalid_password {
+  padding:12px;
+  border: 2px solid #D32F2F;
+  border-radius: 6px;
+  margin:24px;
+
+  background-color: #FD5B6A;
+
+  color: #fff;
+}
+
+footer {
+  font-size: 36px;
+  font-family: Helvetica;
+  line-height: 48px;
+  text-align: center;
+
+  width:960px;
+
+  padding:12px;
+  border-top: 4px solid black;
+  margin: 0 auto;
+  margin-top:48px;
+}
+
+footer span {
+  font-size:12px;
+}
