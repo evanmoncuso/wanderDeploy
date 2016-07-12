@@ -21,22 +21,19 @@ router.post('/*', (req, res) => {
   let username = services.decodeToken(token);
   let item = req.body.item;
   console.log('line 21', username, item);
-  // // from here
-  // // take the item, add it to the database
-  // db.pGetUserIdFromName(username)
-  // .then((data) => {
-  //   let userId = data[0].userId;
-  //   let object = {
-  //       itemId: null,
-  //       itemname: item,
-  //       owner: userId,
-  //       lentTo: null,
-  //     };
-  //     console.log(object);
-  //   db.pQueryInsert(object, 'items');
-  //   res.send('success!');
-  // });
-  // console.log('success! outside');
+  db.pGetUserIdFromName(username, (userId) => {
+    console.log('line 25', userId );
+    userId = userId[0].userId;
+    let object = {
+        itemId: null,
+        itemname: item,
+        owner: userId,
+        lentTo: null,
+      };
+      console.log(object);
+    db.pQueryInsert(object, 'items');
+    res.send('success!');
+  });
 });
 
 module.exports = router;

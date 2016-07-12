@@ -21,7 +21,9 @@ angular.module('main', [])
         url: '/items/'
       })
       .then((update) => {
-        console.log(update);
+        update.data.map((item) => {
+          $scope.owned.push(item.itemname);
+        });
       })
     } else {
       console.log('invalid string');

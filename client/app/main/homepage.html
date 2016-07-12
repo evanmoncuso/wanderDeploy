@@ -7,7 +7,8 @@
   <div class="my_items half">
     <h2>These are the items you own!</h2>
     <ul>
-      <li>a thing!</li>
+      <!-- ng-repeat="link in data.links | filter:filter_links | orderBy: '-visits'" -->
+      <li ng-repeat="item in owned">{{ item }}</li>
     </ul>
   </div>
   <div class="borrowed_items half">
