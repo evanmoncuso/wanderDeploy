@@ -30,10 +30,21 @@ exports.pQueryInsert = (data, table) => {
 }
 
 exports.pQueryGet = (table, callback) => {
-  return new Promise( (resolve, reject) => {
-    connection.query('SELECT * FROM ' + table , data, (err, result) => {
+  return new Promise((resolve, reject) => {
+    connection.query('SELECT * FROM ' + table, (err, result) => {
       if (err) {
         console.log(err);
+      }
+      callback(result);
+    });
+  });
+}
+
+exports.pGetUserIdFromName = (username, callback) => {
+  return new Promise((resolve, reject) => {
+    connection.query('SELECT userId FROM users WHERE username = "' + username +'"', (err, result) => {
+      if (err) {
+        reject(err);
       }
       callback(result);
     });

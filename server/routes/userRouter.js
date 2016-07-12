@@ -32,7 +32,6 @@ router.post('/*', services.crypt, (req, res) => {
   let bodyData = req.body;
   // make sure all incoming user data objects are in good shape
   bodyData = services.dbDataValidate(bodyData);
-
   // submit our new user!
   db.pQueryInsert(bodyData, 'users');
   // send a response saying things are okay

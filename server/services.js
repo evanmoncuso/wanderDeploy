@@ -31,6 +31,11 @@ let hasToken = () => {
  return !!$window.localStorage.getItem('com.wander');
 };
 
+let decodeToken = (token) => {
+  // is there a token in the local storage from us?
+  return jwt.decode(token, secret.secret);
+};
+
 let dbDataValidate = (data) => {
   if (data.username === undefined) {
     throw 'username cannot be undefined';
@@ -52,5 +57,6 @@ module.exports = {
   dbDataValidate: dbDataValidate,
   compare: compare,
   genToken: genToken,
+  decodeToken: decodeToken,
   hasToken: hasToken
 };
