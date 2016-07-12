@@ -1,14 +1,19 @@
 <div class="add_item" >
   <label> add an item </label>
+  <div class="group">
     <input type="text" ng-model="item" placeholder="new item" />
-    <button ng-click="submitItem(item)">add</button>
+    <div class="submit_div" ng-click="submitItem(item)">add</div>
+  </div>
+  <a href="#/home">home</a>
+  <a href="#/all">all items</a>
 </div>
-<div class="home_container">
+<div class="home_container" ng-init="updateOaL()">
   <div class="my_items half">
     <h2>These are the items you own!</h2>
     <ul>
-      <!-- ng-repeat="link in data.links | filter:filter_links | orderBy: '-visits'" -->
-      <li ng-repeat="item in owned">{{ item }}</li>
+      <li class="owned_item" ng-repeat="item in owned track by item.itemId">
+        {{ item.itemname }}
+      </li>
     </ul>
   </div>
   <div class="borrowed_items half">

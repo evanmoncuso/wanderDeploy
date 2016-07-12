@@ -1,6 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+
 header {
   font-size: 36px;
-  font-family: Helvetica;
+  font-family: 'Raleway';
   line-height: 48px;
   text-align: center;
 
@@ -13,12 +16,18 @@ header {
 
 a {
   display:inline-block;
+  font-family: 'Playfair Display';
   color:inherit;
   text-decoration: none;
   width:120px;
   color:white;
   background-color: #000;
   padding:12px;
+}
+
+.other_link:active {
+  background-color: #fff;
+  color:#000;
 }
 
 .top_bar {
@@ -40,15 +49,69 @@ a {
   color: white;
 }
 
-.add_item {
+label {
+  font-family: 'Raleway';
+}
+
+/*
+========
+add item header
+========
+*/
+
+.nope {
   width:960px;
   margin:0 auto;
   border-bottom: 1px solid black;
 }
 
-.add_item form {
+.npe form {
   margin-bottom: 12px;
 }
+
+.submit_div {
+  display:inline-block;
+  font-family: 'Playfair Display';
+  color:inherit;
+  text-decoration: none;
+  width:120px;
+  color:white;
+  background-color: #000;
+  padding:12px;
+}
+
+.submit_div:active {
+  background-color: #fff;
+  color:#000;
+}
+
+.group input {
+  display:inline-block;
+  width:90%;
+  padding:24px;
+  border:none;
+  border-top:1px solid #909090;
+  border-bottom: 1px solid #909090;
+  margin:12px auto;
+  outline: none;
+  text-align: center;
+}
+
+
+.group .submit_div {
+  display:inline-block;
+}
+
+.add_item a {
+
+}
+
+
+/*
+========
+main user view page
+========
+*/
 
 .main_view {
   margin:0 auto;
@@ -66,7 +129,7 @@ a {
   margin: 0 auto;
   width:360px;
 
-  font-family:Helvetica;
+  font-family:Raleway;
 
   font-size: 24px;
   line-height: 32px;
@@ -105,7 +168,7 @@ Home page
 
 .half h2{
   text-align: center;
-  font-family: Helvetica;
+  font-family: Raleway;
   font-size:22px;
   line-height: 32px;
 
@@ -113,6 +176,40 @@ Home page
   display:inline-block;
   border-bottom: 2px solid #000;
 }
+
+.my_items ul {
+  margin-left:12px;
+}
+
+.owned_item {
+  font-size: 22px;
+  line-height: 28px;
+  width: 50%;
+  margin-bottom:12px;
+  border-bottom: 2px solid #999;
+}
+
+.allItems h2 {
+  font-size:32px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+/*
+========
+All items
+========
+*/
+
+.available_item {
+  font-size: 22px;
+  line-height: 28px;
+  width: 50%;
+  margin-left:120px;
+  margin-bottom:12px;
+  border-bottom: 2px solid #999;
+}
+
 
 /*
 ========
@@ -122,7 +219,7 @@ footer things
 
 footer {
   font-size: 36px;
-  font-family: Helvetica;
+  font-family: Raleway;
   line-height: 48px;
   text-align: center;
 

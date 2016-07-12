@@ -29,13 +29,11 @@ exports.pQueryInsert = (data, table) => {
 }
 
 exports.pQueryGet = (table, callback) => {
-  return new Promise((resolve, reject) => {
-    connection.query('SELECT * FROM ' + table, (err, result) => {
-      if (err) {
-        console.log(err);
-      }
-      callback(result);
-    });
+  connection.query('SELECT * FROM ' + table, (err, result) => {
+    if (err) {
+      console.log(err);
+    }
+    callback(result);
   });
 }
 
@@ -52,7 +50,7 @@ exports.pQueryCheckLogin = (username, callback) => {
 }
 
 exports.pGetAllUsersOwnedItems = (username, callback) => {
-  connection.query('SELECT itemname FROM items WHERE owner = '+ userId, (err, result) => {
+  connection.query('SELECT * FROM items WHERE owner = '+ userId, (err, result) => {
     if (err) {
       throw err;
     }
@@ -70,10 +68,14 @@ exports.pGetUserIdFromName = (username, callback) => {
 };
 
 exports.pGetUserOwnedItems = (userId, callback) => {
-  connection.query('SELECT itemname FROM items WHERE owner = ' + userId, (err, result) => {
+  connection.query('SELECT * FROM items WHERE owner = ' + userId, (err, result) => {
     if (err) {
       throw err;
     }
     callback(result);
   });
+}
+
+exports.getUsernameFromId = (userId) => {
+
 }

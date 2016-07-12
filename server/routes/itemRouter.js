@@ -4,13 +4,20 @@ const db = require('./../../db/db');
 
 let router = express.Router();
 
+router.get('/all', (req, res) => {
+  db.pQueryGet('items', (data) => {
+    res.send(data);
+  })
+});
+
 router.get('/*', (req, res) => {
   let token = req.headers['x-access-token'];
   let username = services.decodeToken(token);
   db.pGetUserIdFromName(username, (userId) => {
+    console.log(userId);
     userId = userId[0].userId;
     db.pGetUserOwnedItems(userId, (data) => {
-      console.log('13', data);
+      console.log('from 20', data);
       res.send(data);
     })
   });
@@ -20,9 +27,7 @@ router.post('/*', (req, res) => {
   let token = req.headers['x-access-token'];
   let username = services.decodeToken(token);
   let item = req.body.item;
-  console.log('line 21', username, item);
   db.pGetUserIdFromName(username, (userId) => {
-    console.log('line 25', userId );
     userId = userId[0].userId;
     let object = {
         itemId: null,
@@ -30,7 +35,6 @@ router.post('/*', (req, res) => {
         owner: userId,
         lentTo: null,
       };
-      console.log(object);
     db.pQueryInsert(object, 'items');
     res.send('success!');
   });

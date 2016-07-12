@@ -20,6 +20,14 @@ angular.module('wander', ['ui.router', 'login', 'create', 'main'])
           login: false
         }
       })
+      .state('all', {
+        templateUrl: '../app/main/allitems.html',
+        url: '/all',
+        controller: 'wanderController',
+        data: {
+          login: true
+        }
+      })
       .state('home', {
         templateUrl: '../app/main/homepage.html',
         url: '/home',

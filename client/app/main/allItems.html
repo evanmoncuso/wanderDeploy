@@ -1,0 +1,17 @@
+<div class="add_item" >
+  <label> add an item </label>
+  <div class="group">
+    <input type="text" ng-model="item" placeholder="new item" />
+    <div class="submit_div" ng-click="submitItem(item)">add</div>
+  </div>
+  <a href="#/home">home</a>
+  <a href="#/all">all items</a>
+</div>
+
+<div class="allItems" ng-init="update()">
+  <h2>Available Items</h2>
+  <div class="available_item" ng-repeat="item in allItemsList track by item.itemId" ng-if"item.lentTo !== null" ng-click="borrowItem(item)">
+    <h3>{{item.itemname}}</h3>
+    <span class="ownerName">{{item.owner}}</span>
+  </div>
+</div>

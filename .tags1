@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^<div class="add_item" >$/;"	function	line:1
+label	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <label> add an item <\/label>$/;"	function	line:2
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <div class="group">$/;"	function	line:3
+input	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <input type="text" ng-model="item" placeholder="new item" \/>$/;"	function	line:4
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <div class="submit_div" ng-click="submitItem(item)">add<\/div>$/;"	function	line:5
+a	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <a href="#\/home">home<\/a>$/;"	function	line:7
+a	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <a href="#\/all">all items<\/a>$/;"	function	line:8
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^<div class="home_container" ng-init="updateOaL()">$/;"	function	line:10
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <div class="my_items half">$/;"	function	line:11
+h	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <h2>These are the items you own!<\/h2>$/;"	function	line:12
+ul	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <ul>$/;"	function	line:13
+li	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^      <li class="owned_item" ng-repeat="item in owned track by item.itemId">$/;"	function	line:14
+div	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^  <div class="borrowed_items half">$/;"	function	line:19
+h	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <h2>These are the borrowed items you have!<\/h2>$/;"	function	line:20
+ul	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^    <ul>$/;"	function	line:21
+li	/Users/evanmoncuso/Documents/coding/hr/mvp/client/app/main/homepage.html	/^      <li>a thing!<\/li>$/;"	function	line:22
